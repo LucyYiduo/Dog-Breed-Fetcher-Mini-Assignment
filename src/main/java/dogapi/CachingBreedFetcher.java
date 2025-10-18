@@ -41,4 +41,7 @@ public class CachingBreedFetcher implements BreedFetcher {
         List<String> subs = fetcher.getSubBreeds(breed); // may throw BreedNotFoundException
         cache.put(key, Collections.unmodifiableList(new ArrayList<>(subs)));
         return subs;
+    }
+    public int getCallsMade() {
+        return callsMade;
     }}
